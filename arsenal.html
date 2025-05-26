@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arsenal Football Club</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #990000;
+  }
+
+  header {
+    background: #990000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  header img {
+    width: 60px;
+    height: auto;
+  }
+
+  .logo-link img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .logo-link:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .login-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .login-bar input {
+    padding: 5px;
+    font-size: 0.9em;
+  }
+
+  .login-bar button {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #990000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .login-bar button:hover {
+    background-color: #ffc107;
+    color: #000;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  main {
+    flex: 1;
+    padding: 30px 20px;
+    text-align: center;
+    padding-right: 220px; /* Adjusted padding for space on the right for the sidebar */
+  }
+
+  .highlights {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+
+  .highlights h2 {
+    color: #990000;
+    margin-bottom: 15px;
+  }
+
+  .highlights iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    margin-top: 15px;
+  }
+
+  /* Sponsors Sidebar */
+  .sponsors-sidebar {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 220px;
+    height: 100vh;
+    padding: 20px;
+    background: #f8f8f8;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    overflow-y: auto;
+  }
+
+  footer {
+    background: #990000;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+
+  .social-icons a:hover {
+    color: #ffc107;
+  }
+</style>
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+  <a href="arsenal.html" class="logo-link">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal Badge">
+  </a>
+  <div class="login-bar">
+    <input type="text" placeholder="Username" />
+    <input type="password" placeholder="Password" />
+    <button type="button">Login</button>
+  </div>
+  <h1>Welcome to Arsenal Football Club</h1>
+  <nav>
+    <ul>
+	  <li><a href="about.html">About</a></li>
+      <li><a href="OurPlayers.html">Players</a></li>
+      <li><a href="fixtures.html">Fixtures</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="ContactUs.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main>
+    <section class="highlights">
+      <h2>Match Highlights</h2>
+      <p>Watch the latest Arsenal match highlights below:</p>
+      <!-- First Highlight Video -->
+      <iframe src="https://youtu.be/q9RH3MZSIEA?si=lxLmgtlxUiiXl3Vk" title="Arsenal vs PSG 2nd Leg" allowfullscreen></iframe>
+
+      <!-- Second Highlight Video -->
+      <iframe src="https://www.youtube.com/embed/match-video-id2" title="Arsenal Match Highlights 2" allowfullscreen></iframe>
+
+      <!-- Third Highlight Video -->
+      <iframe src="https://www.youtube.com/embed/match-video-id3" title="Arsenal Match Highlights 3" allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <!-- Sponsors Sidebar -->
+  <!-- Sponsors Sidebar -->
+<div class="sponsors-sidebar">
+  <h3>Our Sponsors</h3>
+  <a href="https://www.emirates.com" target="_blank">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnJmIqUENs4DthbYOusi8CD6kT9P31QIPINQ&s" alt="Emirates">
+  </a>
+  <a href="https://www.adidas.com" target="_blank">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/010/994/239/small_2x/adidas-logo-black-symbol-clothes-design-icon-abstract-football-illustration-with-white-background-free-vector.jpg" alt="Adidas">
+  </a>
+  <a href="https://visitrwanda.com/" target="_blank">
+    <img src="https://seeklogo.com/images/V/visit-rwanda-logo-7E46D2B135-seeklogo.com.png" alt="Visit Rwanda">
+  </a>
+</div>
+
+
+  <footer>
+    <p>&copy; 2025 Arsenal Football Club. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/Arsenal" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/Arsenal" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/arsenal/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/arsenal" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
+

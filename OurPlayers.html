@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players - Football Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <style>
+       * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #ffffff;
+      color: #990000;
+    }
+
+    header {
+      background: #990000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 60px;
+      height: auto;
+    }
+	
+	.logo-link img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .logo-link:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+	.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.login-bar input {
+  padding: 5px;
+  font-size: 0.9em;
+}
+
+.login-bar button {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #990000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-bar button:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+
+
+    nav ul {
+      list-style: none;
+      padding: 10px 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1; 
+        }
+        h2 {
+            color: #990000;
+            margin-bottom: 20px;
+        }
+
+        .players-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        .player-card {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .player-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .player-card h3 {
+            color: #990000;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .player-card p {
+            color: #333;
+            font-size: 1em;
+        }
+
+        footer {
+      background: #990000;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #ffc107;
+    }
+
+        .legends-title {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .legends-title h2 {
+            font-family: 'MedievalSharp', cursive;
+            font-size: 2.5em;
+            color: #990000;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+		
+		.managers {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.managers h2 {
+  color: #990000;
+  margin-bottom: 25px;
+}
+
+.manager-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.manager-card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.manager-card:hover {
+  transform: scale(1.05);
+}
+
+.manager-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.manager-card h3 {
+  color: #990000;
+  margin-bottom: 10px;
+}
+
+.manager-card p {
+  font-size: 0.9em;
+  color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+             <a href="arsenal.html" class="logo-link">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal Badge">
+  </a>
+            <h1>Our Players</h1>
+            <nav>
+                <ul>
+                    <li><a href="arsenal.html"">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="fixtures.html">Fixtures</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="ContactUs.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Our Players</h2>
+            <p>Meet the legendary players of our club, both past and present.</p>
+            <div class="players-gallery">
+
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/Raya.png?auto=webp&itok=fUeIv1h_" alt="David Raya">
+                    <h3>David Raya</h3>
+                    <p>Position: Goalkeeper</p>
+                    <p>Born: 1995</p>
+                    <p>Description: David Raya is a Spanish professional footballer who plays as a goalkeeper for Arsenal and the Spain national team...</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/Saliba_10.jpg?auto=webp&itok=2FasjS49" alt="William Saliba">
+                    <h3>William Saliba</h3>
+                    <p>Position: Defender</p>
+                    <p>Born: 2001</p>
+                    <p>Description: William Saliba is a French professional footballer who plays as a central defender for Arsenal and the France national team...</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/White_5.jpg?auto=webp&itok=dL0_Rpf_" alt="Ben White">
+                    <h3>Ben White</h3>
+                    <p>Position: Defender</p>
+                    <p>Born: 1997</p>
+                    <p>Description: Ben White is an English professional footballer who plays as a central defender or right-back for Arsenal and the England national team...</p>
+                </div>
+   
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/Zinchenko_1.jpg?auto=webp&itok=qLHb5_sd" alt="Oleksandr Zinchenko">
+                    <h3>Oleksandr Zinchenko</h3>
+                    <p>Position: Defender</p>
+                    <p>Born: 1996</p>
+                    <p>Description: Oleksandr Zinchenko is a Ukrainian professional footballer who plays as a left-back or midfielder for Arsenal and the Ukraine national team...</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/Gabriel_5.jpg?auto=webp&itok=ycT-tZgr" alt="Gabriel">
+                    <h3>Gabriel</h3>
+                    <p>Position: Defender</p>
+                    <p>Born: 1997</p>
+                    <p>Description: Gabriel Magalhães is a Brazilian professional footballer who plays as a central defender for Arsenal and the Brazil national team...</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/Rice_0.jpg?auto=webp&itok=Nt2hC1sw" alt="Declan Rice">
+                    <h3>Declan Rice</h3>
+                    <p>Position: Midfielder</p>
+                    <p>Born: 1999</p>
+                    <p>Description: Declan Rice is an English professional footballer who plays as a central midfielder for Arsenal and the England national team...</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/Havertz-New.jpg?auto=webp&itok=sQcH4eO6" alt="Kai Havertz">
+                    <h3>Kai Havertz</h3>
+                    <p>Position: Midfielder</p>
+                    <p>Born: 1999</p>
+                    <p>Description: Kai Havertz is a German professional footballer who plays as an attacking midfielder or forward for Arsenal and the Germany national team...</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/Odegaard-New.jpg?auto=webp&itok=_P_Qw_SL" alt="Martin Ødegaard">
+                    <h3>Martin Ødegaard</h3>
+                    <p>Position: Midfielder</p>
+                    <p>Born: 1998</p>
+                    <p>Description: Martin Ødegaard is a Norwegian professional footballer who plays as an attacking midfielder and captain for Arsenal and the Norway national team...</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/Martinelli_0.png?auto=webp&itok=7RGISa_W" alt="Gabriel Martinelli">
+                    <h3>Gabriel Martinelli</h3>
+                    <p>Position: Forward</p>
+                    <p>Born: 2001</p>
+                    <p>Description: Gabriel Martinelli is a Brazilian professional footballer who plays as a winger for Arsenal and the Brazil national team...</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/Jesus_0.jpg?auto=webp&itok=-B2o6NRw" alt="Eddie Nketiah">
+                    <h3>Gabriel Jesus</h3>
+                    <p>Position: Forward</p>
+                    <p>Born: 1997</p>
+                    <p>Description: Gabriel Jesus is a Brazilian professional footballer who plays as a forward for Arsenal and the Brazil national team. Born on April 3, 1997, in São Paulo, Brazil, Jesus began his career at Palmeiras, where his impressive performances earned him a move to Manchester City in 2017. At City, he quickly established himself as one of the top strikers in the Premier League, known for his pace, technical ability, and clinical finishing. In 2022, Jesus joined Arsenal, bringing his experience and goal-scoring prowess to the team. His versatility allows him to play across the forward line, and he is equally adept at creating chances for his teammates as he is at finishing them himself. Jesus is also renowned for his high work rate, intelligent movement, and ability to link up play. His all-around attacking contributions and leadership make him a vital player for both Arsenal and the Brazil national team.</p>
+                </div>
+
+                <div class="player-card">
+                    <img src="https://www.arsenal.com/sites/default/files/styles/player_card_large/public/images/Saka_46.jpg?auto=webp&itok=r6FdKSel" alt="Bukayo Saka">
+                    <h3>Bukayo Saka</h3>
+                    <p>Position: Forward</p>
+                    <p>Born: 2001</p>
+                    <p>Description: Bukayo Saka is an English professional footballer who plays as a winger for Arsenal and the England national team...</p>
+                </div>
+				<br>
+
+                
+                <div class="legends-title">
+                    <h2>LEGENDS</h2>
+                </div>
+		
+                
+                <div class="player-card">
+                    <img src="data:image/jpeg;base64,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" alt="Player 12">
+                    <h3>Thierry Henry</h3>
+                    <p>Position: Forward</p>
+                    <p>Born: 1977</p>
+                    <p>Description: Thierry Henry is a French football legend, widely regarded as one of the greatest strikers ever. Born on August 17, 1977, he became Arsenal's all-time top scorer with 228 goals. Known for his pace, technical ability, and clinical finishing, Henry was a key figure in Arsenal's unbeaten "Invincibles" season in 2003-2004. He also won the 1998 World Cup and the 2000 European Championship with France. Henry's influence extends beyond playing, as he has since become a coach and pundit, leaving a lasting legacy in football.</p>
+                </div>
+				
+				<div class="player-card">
+    <img src="https://m.media-amazon.com/images/M/MV5BMGJlYzM0MzgtMGIyNC00NjQ0LWFmOGQtNmFlYzI3YWExZTQ3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Player 16">
+    <h3>Dennis Bergkamp</h3>
+    <p>Position: Midfielder</p>
+    <p>Born: 1969</p>
+    <p>Description: Dennis Bergkamp is a former Dutch professional footballer who played as a forward and attacking midfielder. He joined Arsenal in 1995 from Inter Milan and quickly became one of the most influential players in the club's modern history. Known for his exceptional technical skill, vision, and composure, Bergkamp brought a touch of artistry to English football.
+
+At Arsenal, he was a central figure in Arsène Wenger's early success, helping the club win three Premier League titles and four FA Cups. His partnership with Thierry Henry was particularly iconic, and his elegant playing style earned him a place in fans' hearts.
+
+One of his most famous moments came in 2002 with a stunning pirouette goal against Newcastle, often cited as one of the Premier League's best goals. Bergkamp retired in 2006, and Arsenal later unveiled a statue of him outside the Emirates Stadium, honoring his legacy..</p>
+</div>
+
+<div class="player-card">
+    <img src="https://d2x51gyc4ptf2q.cloudfront.net/content/uploads/2016/07/Tony-Adans.jpg" alt="Player 17">
+    <h3>Tony Adams</h3>
+    <p>Position: Defender</p>
+    <p>Born: 1966</p>
+    <p>Description: Tony Adams is a legendary English defender who spent his entire professional career at Arsenal, making over 650 appearances from 1983 to 2002. Known for his leadership, toughness, and defensive intelligence, Adams captained Arsenal for 14 years and remains one of the club’s most iconic figures.
+
+He led the team to four league titles across three different decades (1989, 1991, 1998, and 2002), including a domestic double in 1998 under Arsène Wenger. Nicknamed "Mr. Arsenal," Adams was a natural leader both on and off the pitch and is celebrated for his loyalty and resilience.
+
+Off the field, he battled and overcame alcohol addiction, later founding the Sporting Chance Clinic to help other athletes..</p>
+</div>
+
+<div class="player-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsptLKHglnxfExcBJNRmaZTYZ0h-9S6I1IqQ&s" alt="Player 18">
+    <h3>Patrick Vieira</h3>
+    <p>Position: Midfielder</p>
+    <p>Born: 1976</p>
+    <p>Description: Patrick Vieira is a former French professional footballer best known for his time as a dominant central midfielder at Arsenal from 1996 to 2005. Standing tall and strong, Vieira combined physical power with technical skill and leadership, becoming the heartbeat of Arsène Wenger’s midfield.
+
+He captained Arsenal during the iconic “Invincibles” season in 2003–04, when the club went unbeaten in the Premier League. Known for his fierce battles with rivals like Manchester United's Roy Keane, Vieira was both a defensive anchor and an attacking threat.
+
+During his time at Arsenal, he won three Premier League titles and four FA Cups. Vieira also had a stellar international career, winning the 1998 FIFA World Cup and Euro 2000 with France.</p>
+</div>
+
+            </div>
+			
+			<section class="managers">
+  <h2>Arsenal Managers</h2>
+  <div class="manager-cards">
+   
+    <div class="manager-card">
+      <img src="https://assets.goal.com/images/v3/blt3b17a7f1e4dcc5b6/Arsene_Wenger_Qatar_2022.png" alt="Arsène Wenger">
+      <h3>Arsène Wenger</h3>
+      <p>Longest-serving manager (1996–2018), 3 Premier League titles and 7 FA Cups.</p>
+    </div>
+
+   
+    <div class="manager-card">
+      <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2153706064.jpg?c=16x9&q=h_833,w_1480,c_fill" alt="Mikel Arteta">
+      <h3>Mikel Arteta</h3>
+      <p>Current manager, known for his tactical intelligence and development of young talent.</p>
+    </div>
+
+   
+  </div>
+</section>
+
+        </section>
+
+        <footer>
+    <p>&copy; 2025 Arsenal Football Club. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/Arsenal" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/Arsenal" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/arsenal/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/arsenal" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+    
+</body>
+</html>
+
+
+
+

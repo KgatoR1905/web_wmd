@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Football Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #ffffff;
+            color: #990000;
+        }
+
+        header {
+            background: #990000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 60px;
+            height: auto;
+        }
+		
+		.logo-link img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .logo-link:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+        nav ul {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        h2 {
+            color: #990000;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #990000;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #ffc107;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-grid figure {
+            margin: 0;
+            position: relative;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05); 
+        }
+
+        .gallery-grid figcaption {
+            background: rgba(0, 0, 0, 0.6); 
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.1em;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+         <a href="arsenal.html" class="logo-link">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal Badge">
+  </a>
+        <h1>Club Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="arsenal.html">Home</a></li>
+                <li><a href="fixtures.html">Fixtures</a></li>
+                <li><a href="OurPlayers.html">Players</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Photo Gallery</h2>
+        <p>Explore memorable moments from our football club.</p>
+        <div class="gallery-grid">
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1577224682146-dd7843c88d33?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW1pcmF0ZXMlMjBzdGFkaXVtfGVufDB8fDB8fHww" alt="Emirates Stadium">
+                <figcaption>Emirates Stadium</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.arsenal.com/sites/default/files/styles/gallery_extra_large/public/images/arsenal%202425%20squd%20pic.jpg?auto=webp&itok=YOaKOU86" alt="Arsenal Players">
+                <figcaption>Arsenal Players</figcaption>
+            </figure>
+            <figure>
+                <img src="https://metro.co.uk/wp-content/uploads/2024/11/SEI_231033471-deda.jpg?quality=90&strip=all&w=646" alt="Celebration">
+                <figcaption>Celebration</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images2.minutemediacdn.com/image/upload/c_crop,w_7241,h_4073,x_0,y_231/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/GettyImages/mmsport/90min_en_international_web/01hqqkj3vsrpf5e5f5g2.jpg" alt="Match Day">
+                <figcaption>Match Day</figcaption>
+            </figure>
+			<figure>
+			    <img src="https://www.arsenal.com/sites/default/files/styles/desktop_16x9/public/images/invincibles.png?auto=webp&itok=4N263d33" alt="Invincible squad" >
+			    <figcaption>Invincible Squad 03/04</figacaption>
+			</figure>
+			<figure>
+			    <img src="https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/11EC2/production/_93201437_giroud_getty.jpg" alt="Olivier Giroud Goal" >
+			    <figcaption>Olivier Giroud Goal v Crystal Palace</figacaption>
+			</figure>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Arsenal Football Club. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Arsenal" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/Arsenal" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/arsenal/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/arsenal" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
+
